@@ -16,5 +16,5 @@ jobs:
           server: ftp.bluexyru.shop
           username: ${{ secrets.FTP_USERNAME }} 
           password: ${{ secrets.FTP_PASSWORD }} 
-          local-dir: ./themes/twentytwentyfour/templates/404.html/
+          local-dir: C:/Users/mloyx/OneDrive/Máy tính/bluexyru/themes/twentytwentyfour/templates/404.html/
           dry-run: true
