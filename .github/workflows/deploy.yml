@@ -13,8 +13,8 @@ jobs:
       - name: Deploy to Hostinger 
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with: 
-          ftp-server: ftp://bluexyru.shop
-          ftp-username: ${{ secrets.FTP_USERNAME }} 
-          ftp-password: ${{ secrets.FTP_PASSWORD }} 
+          server: ftp.bluexyru.shop
+          username: ${{ secrets.FTP_USERNAME }} 
+          password: ${{ secrets.FTP_PASSWORD }} 
           local-dir: ./themes/twentytwentyfour/templates/404.html
-          script_stop: true
+          dry-run: true
