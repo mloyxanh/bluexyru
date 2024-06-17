@@ -1,0 +1,20 @@
+name: Deploy to Hostinger 
+on: 
+  push: 
+    branches: 
+      - main 
+jobs: 
+  deploy: 
+    runs-on: windows-latest 
+    steps: 
+      - name: Checkout code 
+        uses: actions/checkout@v2 
+
+      - name: Deploy to Hostinger 
+        uses: SamKirkland/FTP-Deploy-Action@4.1.0 
+        with: 
+          ftp-server: ftp://bluexyru.shop
+          ftp-username: ${{ secrets.FTP_USERNAME }} 
+          ftp-password: ${{ secrets.FTP_PASSWORD }} 
+          local-dir: ./themes/twentytwentyfour/templates/404.html
+          script_stop: true
